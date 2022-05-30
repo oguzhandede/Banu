@@ -44,6 +44,10 @@ if (isset($_POST["giris"])) {
             if (password_verify($parola, $hasliparola)) {
                 session_start();
                 $_SESSION["kullaniciadi"] = $ilgilikayit["kullaniciadi"];
+                $_SESSION["email"] = $ilgilikayit["email"];
+              
+                
+                
                 header("location:profil.php");
             } else {
                 echo '<div class="alert alert-danger" role="alert">

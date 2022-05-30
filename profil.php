@@ -1,6 +1,16 @@
 <?php
 include("baglanti.php");
+
 session_start();
+$kullaniciadi = $_SESSION["kullaniciadi"];
+$sec = "SELECT id FROM hesaplar WHERE kullaniciadi='$kullaniciadi'";
+    
+$sonuc = mysqli_query($baglanti, $sec);
+$cek=$sonuc->fetch_assoc();
+
+$id=$cek["id"];
+
+
 
 
 ?>
@@ -23,23 +33,23 @@ session_start();
             <?php if (isset($_SESSION["kullaniciadi"])) {
 
                 echo "<h3>" . $_SESSION["kullaniciadi"] . " Hoşgeldin </h3>";
+                echo  '  <a href="./veri_guncelle.php"> <button type="submit" class="btn btn-primary" >PROFİL GÜNCELLEME</button></a>';
                 echo  '  <a href="./cikis.php"> <button type="submit" class="btn btn-primary" >Çıkış Yap</button></a>';
 
 
-                // $guncelle="UPDATE hesaplar SET kullaniciadi= WHERE kullaniciadi=$_SESSION['kullaniciadi']";
-
+                
 
 
 
             } else {
                 echo "bu sayfayı görüntüleme izniniz yok";
-            echo  '  <a href="./giris.php"> <button type="submit" class="btn btn-primary" >Giriş Yap</button></a>';
-            echo  '    <a href="./kayit.php"> <button type="submit" class="btn btn-primary" >Kayıt Ol</button></a>';
-    
-            } 
+                echo  '  <a href="./giris.php"> <button type="submit" class="btn btn-primary" >Giriş Yap</button></a>';
+                echo  '    <a href="./kayit.php"> <button type="submit" class="btn btn-primary" >Kayıt Ol</button></a>';
+            }
             ?>
-            
+
           
+
         </div>
     </div>
 

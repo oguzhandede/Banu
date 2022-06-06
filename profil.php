@@ -10,7 +10,18 @@ $cek=$sonuc->fetch_assoc();
 
 $id=$cek["id"];
 
+// setcookie("limit",time()+10); // 20 dakika
 
+
+// ob_start();
+
+// $hesapla = $_COOKIE["limit"]-time(); // Giriş sayfanızda aldırdığınız limit çerezinnden şuanki zamanı çıkarıyoruz kalan değer bizim kaç saniye kaldığımızdır.
+// if($hesapla <= 0){ // Kalan süremiz 0'a eşitse veya küçükse aşağıdaki işlemi yaptırıyoruz.
+
+// session_destroy(); // Kalan süremiz 0'a eşitse veya daha küçükse oturumu sonlandırıyoruz.
+// }else{
+// echo $hesapla.' saniyen daha var :)'; // Kalan süremiz daha varsa kaç saniye olduğunu yazdırıyoruz.
+// }
 
 
 ?>
@@ -28,6 +39,12 @@ $id=$cek["id"];
 
 <body>
 
+
+  <!-- <script>     setTimeout(function(){
+ alert("Sayfa yenilendi");
+ window.location.reload(1);
+}, 10000); 
+ </script> -->
     <div class="container p-5">
         <div class="card p-5 m-5">
             <?php if (isset($_SESSION["kullaniciadi"])) {

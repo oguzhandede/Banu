@@ -83,6 +83,8 @@ if (isset($_POST["guncelle"])) {
                 echo "bu sayfayı görüntüleme izniniz yok";
                 echo  '  <a href="./giris.php"> <button type="submit" class="btn btn-primary" >Giriş Yap</button></a>';
                 echo  '    <a href="./kayit.php"> <button type="submit" class="btn btn-primary" >Kayıt Ol</button></a>';
+                header("location:giris.php");
+
             }
             ?>
            <h2> Profil güncelleme </h2>

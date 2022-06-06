@@ -2,13 +2,7 @@
 include("baglanti.php");
 
 session_start();
-$kullaniciadi = $_SESSION["kullaniciadi"];
-$sec = "SELECT id FROM hesaplar WHERE kullaniciadi='$kullaniciadi'";
-    
-$sonuc = mysqli_query($baglanti, $sec);
-$cek=$sonuc->fetch_assoc();
 
-$id=$cek["id"];
 
 // setcookie("limit",time()+10); // 20 dakika
 
@@ -53,7 +47,13 @@ $id=$cek["id"];
                 echo  '  <a href="./veri_guncelle.php"> <button type="submit" class="btn btn-primary" >PROFİL GÜNCELLEME</button></a>';
                 echo  '  <a href="./cikis.php"> <button type="submit" class="btn btn-primary" >Çıkış Yap</button></a>';
 
-
+                $kullaniciadi = $_SESSION["kullaniciadi"];
+                $sec = "SELECT id FROM hesaplar WHERE kullaniciadi='$kullaniciadi'";
+                    
+                $sonuc = mysqli_query($baglanti, $sec);
+                $cek=$sonuc->fetch_assoc();
+                
+                $id=$cek["id"];
                 
 
 

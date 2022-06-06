@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 06 Haz 2022, 19:45:45
+-- Üretim Zamanı: 06 Haz 2022, 20:04:26
 -- Sunucu sürümü: 10.4.22-MariaDB
 -- PHP Sürümü: 8.1.2
 
@@ -43,12 +43,7 @@ CREATE TABLE `hesaplar` (
 --
 
 INSERT INTO `hesaplar` (`id`, `ip`, `host`, `kullaniciadi`, `email`, `parola`, `zaman`, `kayit_tarihi`) VALUES
-(79, '::1', 'DESKTOP-47BIUR1', 'oguz', 'asdas@asd', '123', '', '0000-00-00 00:00:00'),
-(80, '::1', 'DESKTOP-47BIUR1', 'OguzDEde123qweqw', 'osi1907dede@gmail.com', '123', '', '0000-00-00 00:00:00'),
-(81, '::1', 'DESKTOP-47BIUR1', 'oguz', 'osi1907dede@gmail.com', '$2y$10$/5VItsYeXo/xyzxavXsxtOazg25bXVNNDRXIiXaH8k2uzgA9eY9g.', '', '0000-00-00 00:00:00'),
-(82, '::1', 'DESKTOP-47BIUR1', 'mymphpdede', 'osi1907dede@gmail.com', '$2y$10$23GoHVr97vQsFdx/7umq3.0fEms4vp.yS1MMsXIw5NJm0sISpMdA6', '', '0000-00-00 00:00:00'),
-(83, '::1', 'DESKTOP-47BIUR1', 'asddas', '123213@asdasd', '$2y$10$lCG0hcoRwKcX6flJx1JKC.jPS7oQ51FYDHHqN01CL78Qm8sfLwZKC', '', '0000-00-00 00:00:00'),
-(84, '::1', 'DESKTOP-47BIUR1', '<h1>asdasd</h1>', 'trinvertorunity@gmail.com', '$2y$10$kWI47J3ny5dtuya5pRoW.uuVehc82Y88rrmTbAVwgewC1bB5N8ydC', '', '0000-00-00 00:00:00');
+(85, '::1', 'DESKTOP-47BIUR1', 'oguz', 'asdasasd@asdas', '$2y$10$30IZv2XGX0uX1xEoQ4fgouPDqLa5m5WqeJRPbyQYbWlvVKW/ti64e', '', '0000-00-00 00:00:00');
 
 --
 -- Dökümü yapılmış tablolar için indeksler
@@ -68,7 +63,7 @@ ALTER TABLE `hesaplar`
 -- Tablo için AUTO_INCREMENT değeri `hesaplar`
 --
 ALTER TABLE `hesaplar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

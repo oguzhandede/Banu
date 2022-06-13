@@ -12,7 +12,12 @@ $sonuc = mysqli_query($baglanti, $sec);
 $cek = $sonuc->fetch_assoc();
 $id = $cek["id"];
 
+if (isset($_SESSION["kullaniciadi"])) {
+} else {
 
+    header("location:giris.php");
+
+}
 
 
 
@@ -54,7 +59,7 @@ if (isset($_POST["guncelle"])) {
         }
     } else {
         echo '<div class="alert alert-danger" role="alert">
-       boş veri olmalalı      
+     eksik Hatalı veri       
         </div>';
     }
 }
@@ -78,15 +83,7 @@ if (isset($_POST["guncelle"])) {
 
     <div class="container p-5">
         <div class="card p-5 m-5">
-            <?php if (isset($_SESSION["kullaniciadi"])) {
-            } else {
-                echo "bu sayfayı görüntüleme izniniz yok";
-                echo  '  <a href="./giris.php"> <button type="submit" class="btn btn-primary" >Giriş Yap</button></a>';
-                echo  '    <a href="./kayit.php"> <button type="submit" class="btn btn-primary" >Kayıt Ol</button></a>';
-                header("location:giris.php");
-
-            }
-            ?>
+           
            <h2> Profil güncelleme </h2>
            <form action="veri_guncelle.php" method="POST">
                 <h6>Ip: <?php echo $ip ?></h6>

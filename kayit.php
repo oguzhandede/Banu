@@ -47,7 +47,7 @@ if (isset($_POST["kaydet"])) {
     }
 
     ///////////////////////////////
-    if (isset($kullaniciadi) && isset($email) && isset($parola)) {
+    if (isset($kullaniciadi) && isset($email) && isset($parola) && empty($parolatekrar_err)) {
 
         $ekle="INSERT INTO hesaplar (ip,host,kullaniciadi,email,parola) VALUES('$ip','$host','$kullaniciadi','$email','$parola')";
         $calistirekle = mysqli_query($baglanti, $ekle);

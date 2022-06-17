@@ -1,6 +1,8 @@
 <?php
 include("baglanti.php");
 session_start();
+include("oturumKontrol.php");
+
 $ip = $_SERVER["REMOTE_ADDR"];
 $host = gethostname();
 $sesskullaniciadi = $_SESSION["kullaniciadi"];
@@ -12,12 +14,7 @@ $sonuc = mysqli_query($baglanti, $sec);
 $cek = $sonuc->fetch_assoc();
 $id = $cek["id"];
 
-if (isset($_SESSION["kullaniciadi"])) {
-} else {
 
-    header("location:giris.php");
-
-}
 
 
 

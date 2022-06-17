@@ -1,8 +1,10 @@
 <?php
 include("baglanti.php");
 
+
 session_start();
 
+include("oturumKontrol.php");
 
 // setcookie("limit",time()+10); // 20 dakika
 
@@ -41,7 +43,7 @@ session_start();
  </script> -->
     <div class="container p-5">
         <div class="card p-5 m-5">
-            <?php if (isset($_SESSION["kullaniciadi"])) {
+            <?php 
 
                 echo "<h3>" . $_SESSION["kullaniciadi"] . " Hoşgeldin </h3>";
                 echo  '  <a href="./veri_guncelle.php"> <button type="submit" class="btn btn-primary" >PROFİL GÜNCELLEME</button></a>';
@@ -58,13 +60,7 @@ session_start();
 
 
 
-            } else {
-
-
-                header("location:giris.php");
-
         
-            }
             ?>
 
           
